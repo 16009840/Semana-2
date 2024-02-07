@@ -1,0 +1,219 @@
+body{
+    background-color: #010101;
+}
+
+header  {
+    background-color: #676767;
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+aside{
+    display: block;
+}
+
+.Cuadro1{
+    background-color: #F9f9f9;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 30vh;
+    text-align: center;
+    font-family: Arial;
+}
+
+input[id="primernum"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+input[id="segundonum"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+.TCuadro1 {
+    background-color: #EDE8E4;
+    color: black;
+    font-family: Arial;
+}
+
+#resultado {
+    font-size: auto;
+    font-family: Arial;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.Cuadro2{
+    background-color: #F9f9f9;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 25vh;
+    text-align: center;
+    font-family: Arial;
+    
+}
+
+.TCuadro2 {
+    background-color: #EDE8E4;
+    color: black;
+    font-family: Arial;
+}
+
+input[id="gradosC"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#conversion {
+    font-size: auto;
+    font-family: Arial;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.Cuadro3{
+    background-color: #F9f9f9;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 40vh;
+    text-align: center;
+    font-family: Arial;
+}
+
+.TCuadro3 {
+    background-color: #EDE8E4;
+    color: black;
+    font-family: Arial;
+}
+
+.lista list {
+    list-style-type: none;
+    padding: 2%;
+    margin-top right: 1%;
+}
+
+input[id="nombre"], input[id="numL"]  {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.Cuadro4{
+    background-color: #F9f9f9;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 25vh;
+    text-align: center;
+    font-family: Arial;
+    
+}
+
+.TCuadro4 {
+    background-color: #EDE8E4;
+    color: black;
+    font-family: Arial;
+}
+
+input[id="fecha"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-family: Arial;
+}
+
+.Cuadro5{
+    background-color: #F9f9f9;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 25vh;
+    text-align: center;
+    font-family: Arial;
+    
+}
+
+.TCuadro5 {
+    background-color: #EDE8E4;
+    color: black;
+    font-family: Arial;
+}
+
+input[id="hilera"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-family: Arial;
+}
+
+.Cuadro6{
+    background-color: #F9f9f9;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 25vh;
+    text-align: center;
+    font-family: Arial;
+}
+
+.TCuadro6 {
+    background-color: #EDE8E4;
+    color: black;
+    font-family: Arial;
+}
+
+.list2 {
+    color: rgb(0, 0, 0);
+    padding: 1%;
+}
+
+.Cuadro7{
+    background-color: #F9f9f9;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 30vh;
+    text-align: center;
+    font-family: Arial;
+}
+
+.TCuadro7 {
+    background-color: #EDE8E4;
+    color: black;
+    font-family: Arial;
+}
+
+#CuadritoColor{
+    width: 10vh;
+    height: 10vh;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 45.5%;
+    margin-right: 45.5%;
+    
+}

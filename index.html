@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="Estilos/estilos.css"/>
+        <title>SEMANA #2</title>
+    </head>
+    <body>
+        <header>
+            <h1>SEMANA # 2</h1>
+        </header>
+
+        <!-- ejericio # 1 -->
+        <aside>
+            <div class="Cuadro1">
+                <div class="TCuadro1">
+                    <h1><center>Ejercicio #1</center></h1>
+                </div>
+                <label for="hilera">Ingrese primer número:</label><br><br>
+                <input type="number" id="primernum" placeholder="Ingrese primer número: ">
+                <br><br>
+                <label for="hilera">Ingrese segundo número:</label><br><br>
+                <input type="number" id="segundonum" placeholder="Ingrese segundo número:">
+                <br><br>
+                <button onclick="Calcular()">Calcular</button>
+                <br>
+                <h3 id="resultado"></h3>
+            </div>
+            <script>
+                function Calcular() {
+                    var primernum = parseFloat(document.getElementById('primernum').value);
+                    var segundonum = parseFloat(document.getElementById('segundonum').value);
+                    var resultado = Math.pow(primernum, segundonum);
+                     document.getElementById('resultado').innerText =`El resultado es: ${resultado}`;
+                    }
+            </script>
+
+            <!-- ejericio # 2 -->
+           
+           <div class="Cuadro2">
+            <div class="TCuadro2">
+                <h1><center>Ejercicio #2</center></h1>
+                </div>
+                <label for="hilera">Ingrese los grados C°:</label><br><br>
+                <input type="number" id="gradosC" placeholder="Ingrese los grados C°: ">
+                <br><br>
+                <button onclick="convertir()">Convertir</button>
+                <br><br>
+                <h3 id="conversion"></h3>
+            </div>
+                <script>
+                    function convertir() {
+                    var gradosC = parseFloat(document.getElementById('gradosC').value);
+                    var gradosF = (gradosC * 9/5) +32 ;
+                    document.getElementById('conversion').innerText = `El resultado es: ${gradosF} °F `;
+                    }
+                </script>
+
+                <!-- ejericio # 3 -->
+           
+           <div class="Cuadro3">
+                <div class="TCuadro3">
+                   <h1><center>Ejercicio #3</center></h1>
+                </div>      
+                    <div class ="Ejercicio3"> 
+                    <label for="hilera">Ingrese Nombre:</label><br><br>         
+                     <input type="text" id="nombre" placeholder="Ingrese Nombre">
+                     <br><br>
+                     <button onclick="agregarNombre()">Agregar</button>
+                    </div>
+
+                    <ul id="listaNombres" class="lista"></ul>
+
+                    <div class ="Ejercicio3">  
+                    <label for="hilera">Ingrese Número:</label><br><br>
+                    <input type="number" id="numL" placeholder="Ingrese un numero">
+                    <br><br>
+                    <button onclick="filtrar()">Filtrar</button>
+                    </div>
+
+                    <h3 id="nombresF" class="lista"></h3>
+           </div>
+           <script>
+
+            function agregarNombre() {
+                var nombreIngresado = document.getElementById('nombre');
+                var nombre = nombreIngresado.value.trim();
+                if (nombre !== ''){
+                    var listaNombres = document.getElementById('listaNombres');
+                    var list = document.createElement('list');
+                    list.textContent = nombre;
+                    listaNombres.appendChild(list);
+                    nombreIngresado.value = '';
+                }
+            }
+
+           </script>
+
+            <div class="Cuadro4">
+                 <div class="TCuadro4">
+                      <h1><center>Ejercicio #4</center></h1>
+                  </div>      
+                  <label for="fecha">Ingrese fecha de nacimiento:</label>
+                  <br><br>
+                  <input type="date" id="fecha">
+                  <br><br>
+                  <button onclick="CalcularEdad()">Edad</button>
+                  <h3 id="EdadCalculada"></h3>
+
+            </div>
+                <!-- ejericio # 4 -->
+            <script>
+                function CalcularEdad(){
+                    var fechaN = new Date(document.getElementById("fecha").value);
+                    var dia = new Date();
+                    var años = dia.getFullYear() - fechaN.getFullYear();
+                    var mes = dia.getMonth() - fechaN.getMonth();
+
+                    if(mes < 0 || (mes === 0 && dia.getDate() < fechaN.getDate())) {
+                       años--;
+                    }
+                    document.getElementById("EdadCalculada").textContent = "Edad: " + años + " Años" ;
+                }
+            </script>
+
+
+                <!-- ejericio # 5 -->
+            <div class="Cuadro5">
+                <div class="TCuadro5">
+                     <h1><center>Ejercicio #5</center></h1>
+                </div>
+                <label for="hilera">Ingrese Hilera:</label>
+                  <br><br>
+                  <input type="text" id="hilera" placeholder="Ingrese Hilera">
+                  <br><br>
+                  <button onclick="CotarHilera()">Contar</button>
+                  <h3 id="resultadoHilera"></h3>
+            </div>
+
+            <script>
+                function CotarHilera() {
+                    var hilera = document.getElementById("hilera").value;
+                    var texto = hilera.split(" ");
+                    var numerodepalabras = texto.length;
+
+                    var palabrascontadas = texto.filter(function(palabra){
+                        return palabra !== "";
+                    });
+
+                    numerodepalabras = palabrascontadas.length;
+                    document.getElementById("resultadoHilera").textContent = "Numero de palabras contadas es de: " + numerodepalabras;
+                }
+            </script>
+
+            <!-- ejericio # 6 -->
+            <div class="Cuadro6">
+                <div class="TCuadro6">
+                     <h1><center>Ejercicio #6</center></h1>
+                </div>
+                <label for="numeroej6">Ingrese un número:</label> <br><br>
+                <input type="number" id="numeroej6" placeholder="Ingrese un numero">
+                <button onclick="agregarNum()">Agregar</button>
+            
+                <h3 id="listaNumeros"></h3>
+            
+                <button onclick="calcularPromedio()">Calcular Promedio</button>
+                <h3 id="resultado6"></h3>
+            </div>
+
+            <script>
+                var numerosej6 = [];
+                
+                function agregarNum() {
+                    var numeroIngresado = document.getElementById("numeroej6");
+                    var numeroej6 = parseFloat(numeroIngresado.value);
+                    
+                    if (!isNaN(numeroej6)) {
+                        numerosej6.push(numeroej6);
+                        NuevaListaNumeros();
+                        numeroIngresado.value = "";
+                    }
+                }
+                function NuevaListaNumeros() {
+                    var listadeNumeros = document.getElementById("listadeNumeros");
+                    listaNumeros.innerHTML = "";
+                    numerosej6.forEach(function(numeroej6) {
+                        var list2 = document.createElement("listd");
+                        list2.classList.add("list2");
+                        list2.textContent = numeroej6;
+                        listaNumeros.appendChild(list2);
+                    });
+                }
+                
+                function calcularPromedio() {
+                    var suma = 0;
+                    numerosej6.forEach(function(numeroej6) {
+                        suma += numeroej6;
+                    });
+                    var promedio = suma / numerosej6.length;
+                    document.getElementById("resultado6").textContent = "El promedio es: " + promedio;
+                }
+                </script>
+    
+                <!-- ejericio # 7 -->
+                <div class="Cuadro7">
+                    <div class="TCuadro7">
+                         <h1><center>Ejercicio #7</center></h1>
+                    </div>
+                    <label for="Color">Ingrese un color</label><br><br>
+                    <input type="color" id="color">
+                    <br><br>
+                    <button onclick="Mostrarcolor()">Mostrar Color</button>
+                    <div id="CuadritoColor"></div>
+                </div>
+
+                <script>
+                    function Mostrarcolor(){
+                        var Color = document.getElementById("color").value;
+                        var CuadritoColor = document.getElementById("CuadritoColor");
+                        CuadritoColor.style.backgroundColor = Color;
+                    }
+                </script>
+
+        </aside>
+    </body>
+</html>
